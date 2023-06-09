@@ -1,10 +1,10 @@
 mysql:
-  path: 127.0.0.1
+  path: rm-cn-x0r395x3e0007aeo.rwlb.rds.aliyuncs.com
   port: "3306"
   config: charset=utf8mb4&parseTime=True&loc=Local
   db-name: whiteboard
-  username: root
-  password: ""
+  username: baoguoqiang
+  password: Tiger!2023
   prefix: ""
   singular: false
   engine: ""
