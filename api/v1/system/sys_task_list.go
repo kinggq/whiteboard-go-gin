@@ -26,7 +26,8 @@ func (t TaskListApi) Create(ctx *gin.Context) {
 		ListTitle: tl.ListTitle,
 		ProjectId: tl.ProjectId,
 	}
-	err = taskListService.Create(*l)
+	userID := utils.GetUserID(ctx)
+	err = taskListService.Create(userID, *l)
 	if err != nil {
 		response.FailWithMessage(err.Error(), ctx)
 		return

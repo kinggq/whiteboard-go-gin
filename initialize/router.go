@@ -16,7 +16,13 @@ func Routes() *gin.Engine {
 	PublicGroup := Router.Group("")
 	{
 		systemRouter.InitBaseRouter(PublicGroup)
-		systemRouter.InitTaskRouter(PublicGroup)
+
+	}
+
+	PrivateGroup := Router.Group("")
+	PrivateGroup.Use(middleware.JWTAuth())
+	{
+		systemRouter.InitTaskRouter(PrivateGroup)
 	}
 	return Router
 }

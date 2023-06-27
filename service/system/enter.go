@@ -5,4 +5,5 @@ type ServiceGroup struct {
 	TaskService
 	TaskListService
 	ProjectService
+	JwtService
 }
